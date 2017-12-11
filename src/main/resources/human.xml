@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	
+	<bean id="human" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+	</bean>
+	
+	<bean id="human2" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+		<property name="friends">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+			</list>
+		</property>	
+	</bean>
+	
+	<bean id="human3" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+		<property name="friends">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+			</list>
+		</property>	
+		<property name="hobbies">
+			<list>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Basketball"></property>
+				</bean>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Baseball"></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<bean id="human4" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+		<property name="friends">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+			</list>
+		</property>	
+		<property name="hobbies">
+			<list>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Basketball"></property>
+				</bean>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Baseball"></property>
+				</bean>
+			</list>
+		</property>
+		<property name="games">
+			<map>
+				<entry>
+					<key>
+						<value>survivor</value>
+					</key>
+					<value>绝地求生</value>
+				</entry>
+				<entry>
+					<key>
+						<value>legend</value>
+					</key>
+					<value>英雄联盟</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="human5" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+		<property name="friends">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+			</list>
+		</property>	
+		<property name="hobbies">
+			<list>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Basketball"></property>
+				</bean>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Baseball"></property>
+				</bean>
+			</list>
+		</property>
+		<property name="games">
+			<map>
+				<entry>
+					<key>
+						<value>survivor</value>
+					</key>
+					<value>绝地求生</value>
+				</entry>
+				<entry>
+					<key>
+						<value>legend</value>
+					</key>
+					<value>英雄联盟</value>
+				</entry>
+			</map>
+		</property>
+		<property name="pets">
+			<list>
+				<map>
+					<entry>
+						<key>
+							<value>金毛</value>
+						</key>
+						<value>金毛</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>斗牛犬</value>
+						</key>
+						<value>斗牛犬</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>柴犬</value>
+						</key>
+						<value>柴犬</value>
+					</entry>
+				</map>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="human6" class="com.bdqn.bean.Human">
+		<property name="name" value="尼古拉斯"></property>
+		<property name="age" value="18"></property>
+		<property name="friends">
+			<list>
+				<value>张三</value>
+				<value>李四</value>
+				<value>王五</value>
+			</list>
+		</property>	
+		<property name="hobbies">
+			<list>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Basketball"></property>
+				</bean>
+				<bean id="hobby" class="com.bdqn.bean.Hobby">
+					<property name="name" value="Baseball"></property>
+				</bean>
+			</list>
+		</property>
+		<property name="games">
+			<map>
+				<entry>
+					<key>
+						<value>survivor</value>
+					</key>
+					<value>绝地求生</value>
+				</entry>
+				<entry>
+					<key>
+						<value>legend</value>
+					</key>
+					<value>英雄联盟</value>
+				</entry>
+			</map>
+		</property>
+		<property name="pets">
+			<list>
+				<map>
+					<entry>
+						<key>
+							<value>金毛</value>
+						</key>
+						<value>金毛</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>斗牛犬</value>
+						</key>
+						<value>斗牛犬</value>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>柴犬</value>
+						</key>
+						<value>柴犬</value>
+					</entry>
+				</map>
+			</list>
+		</property>
+		<property name="listMapGirl">
+			<list>
+				<map>
+					<entry>
+						<key>
+							<value>footballStar</value>
+						</key>
+						<bean id="boy" class="com.bdqn.bean.Boy">
+							<property name="name" value="梅西"></property>
+							<property name="nationality" value="阿根廷"></property>
+							<property name="phones">
+								<list>
+									<value>Nokia</value>
+									<value>HuaWei</value>
+								</list>
+							</property>
+						</bean>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>footballStar</value>
+						</key>
+						<bean id="boy" class="com.bdqn.bean.Boy">
+							<property name="name" value="C罗"></property>
+							<property name="nationality" value="葡萄牙"></property>
+							<property name="phones">
+								<list>
+									<value>Motolora</value>
+									<value>Nubia</value>
+								</list>
+							</property>
+						</bean>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>footballStar</value>
+						</key>
+						<bean id="boy" class="com.bdqn.bean.Boy">
+							<property name="name" value="伊布"></property>
+							<property name="nationality" value="瑞典"></property>
+							<property name="phones">
+								<list>
+									<value>iPhone X</value>
+									<value>Moto</value>
+									<value>SungSum</value>
+								</list>
+							</property>
+						</bean>
+					</entry>
+				</map>
+			</list>
+		
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans>

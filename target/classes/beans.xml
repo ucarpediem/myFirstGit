@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+					http://www.springframework.org/schema/beans/spring-beans.xsd
+					http://www.springframework.org/schema/context 
+					http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	
+	<!--  p:命名空间 c命名空间 -->
+	
+	
+	
+	<bean id="blog" class="com.bdqn.bean.Blog" p:title="中国" p:content="good"></bean>
+	<bean id="blog2" class="com.bdqn.bean.Blog" p:title="中国" p:content="good" p:comment-ref="comment"></bean>
+	<bean id="comment" class="com.bdqn.bean.Comment" p:content="牛皮"></bean>
+	
+	<bean id="comment2" class="com.bdqn.bean.Comment" c:content="comment2"></bean>
+	<bean id="comment3" class="com.bdqn.bean.Comment" c:content="comment2" scope="singleton"></bean>
+	
+	<bean id="baseBean" class="com.bdqn.bean.AbsBean" abstract="true">
+		<property name="son" value="成吉思汗"></property>
+	</bean>
+	<bean id="absBean2" class="com.bdqn.bean.AbsBean" parent="baseBean">
+		<property name="number" value="33"></property>
+	</bean>
+	
+	<!-- 集合 -->
+	<bean id="student" class="com.bdqn.bean.Student">
+		<property name="age" value="18"></property>
+		<property name="name" value="西门大官人"></property>
+		<property name="books">
+			<list>
+				<value>搜神记</value>
+				<value>山海经</value>
+				<value>巴黎圣母院</value>
+				<value>简爱</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="student2" class="com.bdqn.bean.Student">
+		<property name="age" value="18"></property>
+		<property name="name" value="西门大官人"></property>
+		<property name="books">
+			<list>
+				<value>搜神记</value>
+				<value>山海经</value>
+				<value>巴黎圣母院</value>
+				<value>简爱</value>
+			</list>
+		</property>
+		<property name="itbooks">
+			<list>
+				<bean class="com.bdqn.bean.ItBook">
+					<property name="name" value="数据库编程"></property>
+					<property name="price" value="33.0"></property>
+				</bean>			
+				<bean class="com.bdqn.bean.ItBook">
+					<property name="name" value="小白修电脑"></property>
+					<property name="price" value="23.3"></property>
+				</bean>			
+			</list>
+			
+		</property>
+	</bean>
+	
+	<!-- Map集合 -->
+	<bean id="student3" class="com.bdqn.bean.Student">
+		<property name="age" value="18"></property>
+		<property name="name" value="西门大官人"></property>
+		<property name="books">
+			<list>
+				<value>搜神记</value>
+				<value>山海经</value>
+				<value>巴黎圣母院</value>
+				<value>简爱</value>
+			</list>
+		</property>
+		<property name="itbooks">
+			<list>
+				<bean class="com.bdqn.bean.ItBook">
+					<property name="name" value="数据库编程"></property>
+					<property name="price" value="33.0"></property>
+				</bean>			
+			</list>
+		</property>
+		<property name="games">
+			<map key-type="java.lang.String" value-type="java.lang.Object">
+				<entry>
+					<key>
+						<value>lol</value>
+					</key>
+					<value>英雄联盟</value>
+				</entry>
+				<entry>
+					<key>
+						<value>cj</value>
+					</key>
+					<value>吃鸡</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="student4" class="com.bdqn.bean.Student">
+		<property name="age" value="18"></property>
+		<property name="name" value="西门大官人"></property>
+		<property name="books">
+			<list>
+				<value>搜神记</value>
+				<value>山海经</value>
+				<value>巴黎圣母院</value>
+				<value>简爱</value>
+			</list>
+		</property>
+		<property name="itbooks">
+			<list>
+				<bean class="com.bdqn.bean.ItBook">
+					<property name="name" value="数据库编程"></property>
+					<property name="price" value="33.0"></property>
+				</bean>			
+			</list>
+		</property>
+		<property name="games">
+			<map key-type="java.lang.String" value-type="java.lang.Object">
+				<entry>
+					<key>
+						<value>lol</value>
+					</key>
+					<value>英雄联盟</value>
+				</entry>
+				<entry>
+					<key>
+						<value>cj</value>
+					</key>
+					<value>吃鸡</value>
+				</entry>
+			</map>
+		</property>
+		<property name="listMapGirls">
+			<list>
+				<map>
+					<entry>
+						<key>
+							<value>wf</value>
+						</key>
+						<bean class="com.bdqn.bean.Girl">
+							<property name="age" value="18"></property>
+							<property name="hzps">
+								<list>
+									<value>大宝</value>
+									<value>百雀羚</value>
+									
+								</list>
+							</property>
+						</bean>
+					</entry>
+				</map>
+				<map>
+					<entry>
+						<key>
+							<value>hx</value>
+						</key>
+						<bean class="com.bdqn.bean.Girl">
+							<property name="age" value="19"></property>
+							<property name="hzps">
+								<list>
+									<value>香奈儿</value>
+									<value>温碧泉</value>
+									
+								</list>
+							</property>
+						</bean>
+					</entry>
+				
+				</map>
+
+			
+			</list>
+		
+		
+		
+		
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</beans>

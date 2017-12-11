@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="helloWord" class="com.bdqn.bean.HelloWorld">
+		<property name="name" value="刘楚益"></property>
+	</bean>
+	<bean id="helloWorld2" class="com.bdqn.bean.HelloWorld" init-method="init" destroy-method="die">
+		<property name="name" value="打包"></property>
+	</bean>
+	
+	<!--  -->
+<!-- 	<bean id="author" class="com.bdqn.bean.Author">
+		<constructor-arg name="age" value="22"></constructor-arg>
+		<constructor-arg name="name" value="王菲"></constructor-arg>		
+	</bean> -->
+	
+	<bean id="author2" class="com.bdqn.bean.Author">
+		<constructor-arg name="age" value="22"></constructor-arg>
+		<constructor-arg name="name" value="王菲"></constructor-arg>
+		<constructor-arg ref="wife"></constructor-arg>
+	
+	</bean>
+	
+		<bean id="author3" class="com.bdqn.bean.Author">
+			<constructor-arg name="age" value="22"></constructor-arg>
+			<constructor-arg name="name" value="王菲2"></constructor-arg>
+			<property name="wife" ref="wife"></property>	
+		</bean>
+		
+		<bean id="author4" class="com.bdqn.bean.Author">
+			<constructor-arg name="age" value="22"></constructor-arg>
+			<constructor-arg name="name" value="王菲2"></constructor-arg>
+			<property name="wife">
+				<bean class="com.bdqn.bean.Wife">
+					<property name="love" value="88"></property>
+					<property name="name" value="Cathelin"></property>
+				</bean>
+			</property>	
+		</bean>
+	
+	<bean id="wife" class="com.bdqn.bean.Wife">
+		<property name="name" value="yangmi"></property>
+		<property name="love" value="99"></property>
+		
+	</bean>
+	
+	
+	
+</beans>
